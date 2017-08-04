@@ -1,6 +1,6 @@
 {
   "name": "trival-fast-rebuild",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "临时解决CI环境下安装几个图片工具特别慢的问题，最好是下载源解决",
   "scripts": {
     "fastrebuild": "bin/rebuild.js"
