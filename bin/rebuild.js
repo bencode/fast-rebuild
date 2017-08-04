@@ -12,7 +12,8 @@ const deps = {
   gifsicle: 'gifsicle',
   mozjpeg: 'cjpeg',
   'optipng-bin': 'optipng',
-  'pngquant-bin': 'pngquant'
+  'pngquant-bin': 'pngquant',
+  'jpegtran-bin': 'jpegtran'
 };
 
 
@@ -23,8 +24,9 @@ const start = new Date().getTime();
 for (const name in deps) {
   const file = deps[name]
   const from = pathUtil.join(__dirname, `../res/${platform}/${file}`);
-  const to = pathUtil.join(targetDir, name, 'vendor', file);
-  if (!fs.existsSync(to)) {
+  const pkg = pathUtil.join(targetDir, name);
+  if (fs.existsSync(pkg)) {
+    const to = pathUtil.join(pkg, 'vendor', file);
     fs.ensureDirSync(pathUtil.dirname(to));
     fs.copySync(from, to);
   }
