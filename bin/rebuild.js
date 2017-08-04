@@ -16,8 +16,7 @@ const deps = {
 };
 
 
-const root = process.argv[2] || process.cwd();
-const targetDir = pathUtil.join(root, 'node_modules');
+const targetDir = pathUtil.join(__dirname, '../../');
 
 const start = new Date().getTime();
 
