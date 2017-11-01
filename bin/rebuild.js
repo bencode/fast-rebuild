@@ -13,7 +13,8 @@ const deps = {
   mozjpeg: 'cjpeg',
   'optipng-bin': 'optipng',
   'pngquant-bin': 'pngquant',
-  'jpegtran-bin': 'jpegtran'
+  'jpegtran-bin': 'jpegtran',
+  'cwebp-bin': 'cwebp'
 };
 
 
